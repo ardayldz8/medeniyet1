@@ -5,9 +5,9 @@ import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-screen overflow-hidden">
       <video
-        className="absolute inset-0 h-full w-full object-cover object-[50%_50%] md:object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
+        className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
         autoPlay
         muted
         loop
@@ -23,7 +23,7 @@ export function Hero() {
 
       {/* Use a responsive gutter so the hero copy can sit closer to the left edge on wide screens. */}
       <div className="relative z-10 w-full px-[clamp(1rem,6vw,8rem)]">
-        <div className="flex min-h-screen items-end pb-24 md:items-start md:pt-48 md:pb-24">
+        <div className="flex min-h-[85vh] md:min-h-screen items-end pb-8 md:items-start md:pt-48 md:pb-24">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
