@@ -66,7 +66,7 @@ export function TopNav() {
           href="/"
           aria-label="Ana sayfa"
           className={cn(
-            "absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-12 md:-translate-x-16",
+            "absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-20 sm:-translate-x-16 md:-translate-x-16",
             "transition-all duration-300 hover:scale-[1.02]",
             "drop-shadow-[0_10px_28px_rgba(0,0,0,0.70)]"
           )}
