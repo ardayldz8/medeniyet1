@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 8 8 8;
+  --panel: 16 16 16;
+  --panel-hover: 22 22 22;
+  --text: 246 244 240;
+  --muted: 160 156 148;
+
+  /* Premium steakhouse palette */
+  --brand: 62 10 18;
+  /* deep burgundy */
+  --brandWine: 188 21 33;
+  /* #bc1521 */
+  --brandGold: 212 175 55;
+  /* accent gold */
+  --brandWarm: 139 69 19;
+  /* warm brown */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* Multi-layer premium background */
+  background:
+    /* Top ambient glow */
+    radial-gradient(ellipse 100% 40% at 50% -10%, rgb(var(--brand) / 0.35), transparent 60%),
+    /* Side warmth */
+    radial-gradient(ellipse 50% 80% at -10% 50%, rgb(var(--brandWarm) / 0.08), transparent 50%),
+    radial-gradient(ellipse 50% 80% at 110% 50%, rgb(var(--brandWarm) / 0.08), transparent 50%),
+    /* Bottom subtle glow */
+    radial-gradient(ellipse 80% 30% at 50% 110%, rgb(var(--brand) / 0.2), transparent 50%),
+    /* Base gradient */
+    linear-gradient(180deg, rgb(8 8 8) 0%, rgb(0 0 0) 100%);
+  color: rgb(var(--text));
+}
+
+/* Premium grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
+
+/* Subtle vignette effect */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--brandWine));
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar for horizontal scroll areas */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for main content */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--brandWine) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--brandWine) / 0.5);
+}
+
+/* Glass effect utility */
+.glass {
+  background: rgb(var(--panel) / 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+/* Glow effect utility */
+.glow-wine {
+  box-shadow: 0 0 30px rgb(var(--brandWine) / 0.15);
+}

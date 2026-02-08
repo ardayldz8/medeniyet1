@@ -1,0 +1,72 @@
+
+> medeniyet@0.0.0 dev
+> next dev --turbo
+
+   ▲ Next.js 15.5.12 (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.109:3001
+
+ ✓ Starting...
+ ✓ Ready in 1336ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.5s
+ GET / 200 in 3008ms
+ GET / 200 in 115ms
+ ✓ Compiled in 58ms
+ ✓ Compiled in 35ms
+ ✓ Compiled in 34ms
+ ✓ Compiled in 89ms
+ ✓ Compiled / in 52ms
+ GET / 200 in 304ms
+ ✓ Compiled in 42ms
+ ✓ Compiled / in 49ms
+ GET / 200 in 303ms
+ ✓ Compiled in 45ms
+ ✓ Compiled / in 63ms
+ GET / 200 in 359ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 44ms
+ ✓ Compiled in 46ms
+ ✓ Compiled / in 49ms
+ GET / 200 in 307ms
+ ✓ Compiled in 37ms
+ ✓ Compiled in 29ms
+ ✓ Compiled in 39ms
+ ✓ Compiled in 36ms
+ ✓ Compiled in 45ms
+ ✓ Compiled in 31ms
+ ✓ Compiled in 31ms
+ ✓ Compiled in 31ms
+ ✓ Compiled in 124ms
+ ✓ Compiled in 36ms
+ ✓ Compiled / in 47ms
+ GET / 200 in 287ms
+ ✓ Compiled in 72ms
+ ✓ Compiled in 58ms
+ ✓ Compiled in 66ms
+ ✓ Compiled in 67ms
+ ✓ Compiled in 44ms
+ ✓ Compiled in 46ms
+ ✓ Compiled in 108ms
+ ✓ Compiled in 1065ms
+ ✓ Compiled in 270ms
+ ✓ Compiled in 64ms
+ ✓ Compiled in 50ms
+ ✓ Compiled in 39ms
+ ✓ Compiled in 76ms
+ ✓ Compiled in 41ms
+ ✓ Compiled in 42ms
+ ✓ Compiled in 47ms
+ ✓ Compiled in 79ms
+ ✓ Compiled in 49ms
+ ✓ Compiled in 58ms
+ ✓ Compiled in 936ms
+ ✓ Compiled in 63ms
+ ✓ Compiled in 210ms
+ ✓ Compiled in 72ms
+ ✓ Compiled in 78ms
+ ✓ Compiled in 67ms
+ ✓ Compiled in 46ms
+ ✓ Compiled in 54ms
+ ✓ Compiled in 46ms
+ ✓ Compiled in 54ms
