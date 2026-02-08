@@ -60,7 +60,7 @@ export function TopNav() {
           : "bg-transparent"
       )}
     >
-      <div className="relative h-[104px]">
+      <div className="relative h-[80px] md:h-[104px]">
         {/* Logo - pinned left with hover effect */}
         <Link
           href="/"
@@ -71,11 +71,11 @@ export function TopNav() {
             "drop-shadow-[0_10px_28px_rgba(0,0,0,0.70)]"
           )}
         >
-          <Brand className="h-[84px] w-[430px] md:h-[96px] md:w-[560px]" />
+          <Brand className="h-[56px] w-[280px] sm:h-[72px] sm:w-[360px] md:h-[96px] md:w-[560px]" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="mx-auto flex h-[104px] w-full max-w-screen-2xl items-center px-3 md:px-6 lg:px-8 md:pl-[620px] md:pr-[220px]">
+        <div className="mx-auto flex h-[80px] md:h-[104px] w-full max-w-screen-2xl items-center px-3 md:px-6 lg:px-8 md:pl-[620px] md:pr-[220px]">
           <nav
             className="hidden flex-1 items-center justify-center gap-8 md:flex"
             aria-label="Üst menü"
@@ -176,7 +176,7 @@ export function TopNav() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-[55] bg-black/80 backdrop-blur-md md:hidden"
               aria-hidden="true"
               onClick={() => setOpen(false)}
             />
@@ -190,7 +190,7 @@ export function TopNav() {
               className={cn(
                 "fixed right-3 top-3 z-[60] w-[min(92vw,380px)] md:hidden",
                 "overflow-hidden rounded-2xl",
-                "border border-white/10 bg-[rgb(var(--bg))/0.98]",
+                "border border-white/10 bg-[rgb(var(--bg))]",
                 "shadow-[0_24px_80px_rgba(0,0,0,0.7)]",
                 "backdrop-blur-xl"
               )}
