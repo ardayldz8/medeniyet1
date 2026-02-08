@@ -28,7 +28,7 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
             <div className="flex h-[60px] items-center justify-between px-4">
                 {/* Logo */}
                 <Link href="/" aria-label="Ana sayfa" className="-ml-2">
-                    <Brand className="h-[40px] w-[160px]" />
+                    <Brand className="h-[50px] w-[200px]" />
                 </Link>
 
                 {/* Menu button */}
