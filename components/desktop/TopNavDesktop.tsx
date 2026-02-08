@@ -19,22 +19,22 @@ export function TopNavDesktop({ scrolled }: { scrolled: boolean }) {
     return (
         <header
             className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${scrolled
-                    ? "bg-[rgb(var(--bg))/0.95] shadow-[0_4px_30px_rgba(0,0,0,0.45)] backdrop-blur-lg"
-                    : "bg-transparent"
+                ? "bg-[rgb(var(--bg))/0.95] shadow-[0_4px_30px_rgba(0,0,0,0.45)] backdrop-blur-lg"
+                : "bg-transparent"
                 }`}
         >
-            <div className="relative h-[80px]">
+            <div className="relative h-[90px]">
                 {/* Logo */}
                 <Link
                     href="/"
                     aria-label="Ana sayfa"
-                    className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-16 transition-all duration-300 hover:scale-[1.02] drop-shadow-[0_10px_28px_rgba(0,0,0,0.70)]"
+                    className="absolute left-6 top-1/2 z-10 -translate-y-1/2 transition-all duration-300 hover:scale-[1.02]"
                 >
-                    <Brand className="h-[72px] w-[420px]" />
+                    <Brand className="h-[80px] w-auto" />
                 </Link>
 
                 {/* Navigation */}
-                <div className="mx-auto flex h-[80px] w-full max-w-screen-2xl items-center px-6 lg:px-8 pl-[480px] pr-[180px]">
+                <div className="mx-auto flex h-[90px] w-full max-w-screen-2xl items-center justify-center px-6 lg:px-8">
                     <nav className="flex flex-1 items-center justify-center gap-8" aria-label="Üst menü">
                         {nav.map((item) => {
                             const active = pathname === item.href;
