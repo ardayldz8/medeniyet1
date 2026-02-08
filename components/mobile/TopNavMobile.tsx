@@ -25,10 +25,10 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                 : "bg-transparent"
                 }`}
         >
-            <div className="flex h-[60px] items-center justify-between px-4">
+            <div className="flex h-[60px] items-center justify-between px-2">
                 {/* Logo */}
-                <Link href="/" aria-label="Ana sayfa" className="-ml-2">
-                    <Brand className="h-[50px] w-[200px]" />
+                <Link href="/" aria-label="Ana sayfa" className="-ml-4">
+                    <Brand className="h-[60px] w-[240px]" />
                 </Link>
 
                 {/* Menu button */}
