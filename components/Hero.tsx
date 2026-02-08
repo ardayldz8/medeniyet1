@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-7 font-[var(--font-heading)] text-5xl font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+              className="mt-7 font-[var(--font-heading)] text-[2.5rem] font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] sm:text-6xl md:text-8xl lg:text-9xl"
               aria-label="Ustalığın İzi, Izgaranın Klasikleri, Ateşi, Lezzeti, Geleneği."
             >
               Ustalığın İzi
@@ -88,7 +88,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl md:text-2xl lg:text-3xl"
+              className="mt-6 max-w-2xl text-base leading-relaxed text-white/72 sm:text-lg md:text-xl"
             >
               Günlük taze et seçimi, kontrollü pişirim ve sıcak servis. Menüyü inceleyin,
               masanızı ayırtın.
