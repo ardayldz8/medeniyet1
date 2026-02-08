@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-7 font-[var(--font-heading)] text-[2.5rem] font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] sm:text-6xl md:text-8xl lg:text-9xl"
+              className="mt-7 font-[var(--font-heading)] text-[2.5rem] font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] sm:text-5xl md:text-7xl lg:text-8xl"
               aria-label="Ustalığın İzi, Izgaranın Klasikleri, Ateşi, Lezzeti, Geleneği."
             >
               Ustalığın İzi
