@@ -21,72 +21,71 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
     return (
         <header
             className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-black/90 shadow-lg backdrop-blur-md"
-                    : "bg-gradient-to-b from-black/60 to-transparent"
+                    ? "bg-black/95 backdrop-blur-md"
+                    : "bg-gradient-to-b from-black/70 via-black/30 to-transparent"
                 }`}
         >
-            {/* Main navbar container - full width */}
-            <div className="flex h-16 items-center justify-between">
-                {/* Logo - extends to edge */}
-                <Link href="/" aria-label="Ana sayfa" className="pl-3">
-                    <Brand className="h-14 w-56" />
+            {/* Navbar - 72px height with proper padding */}
+            <div className="flex h-[72px] items-center justify-between px-5">
+                {/* Logo - properly sized and vertically centered */}
+                <Link href="/" aria-label="Ana sayfa">
+                    <Brand className="h-12 w-auto max-w-[200px]" />
                 </Link>
 
-                {/* Hamburger button - 48px touch target */}
+                {/* Premium hamburger - thin lines, no background */}
                 <button
                     type="button"
-                    className="mr-3 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm active:scale-95 transition-transform"
+                    className="flex h-11 w-11 items-center justify-center"
                     aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
                     aria-expanded={open}
                     onClick={() => setOpen((v) => !v)}
                 >
-                    <div className="relative flex h-5 w-6 flex-col justify-between">
+                    <div className="relative flex h-4 w-6 flex-col justify-between">
                         <motion.span
-                            animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                            className="h-0.5 w-full rounded-full bg-white"
-                            transition={{ duration: 0.2 }}
+                            animate={open ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }}
+                            className="h-[1.5px] w-full bg-white origin-center"
+                            transition={{ duration: 0.25 }}
                         />
                         <motion.span
                             animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-                            className="h-0.5 w-full rounded-full bg-white"
+                            className="h-[1.5px] w-full bg-white"
                             transition={{ duration: 0.15 }}
                         />
                         <motion.span
-                            animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                            className="h-0.5 w-full rounded-full bg-white"
-                            transition={{ duration: 0.2 }}
+                            animate={open ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }}
+                            className="h-[1.5px] w-full bg-white origin-center"
+                            transition={{ duration: 0.25 }}
                         />
                     </div>
                 </button>
             </div>
 
-            {/* Fullscreen Mobile Menu */}
+            {/* Fullscreen overlay menu */}
             <AnimatePresence>
                 {open && (
                     <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                        className="fixed inset-0 top-16 z-50 bg-black/95 backdrop-blur-lg"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 top-[72px] z-50 bg-black/98"
                     >
-                        {/* Menu content */}
-                        <nav className="flex flex-col p-6" aria-label="Mobil menü">
+                        <nav className="flex flex-col px-8 pt-8" aria-label="Mobil menü">
                             {nav.map((item, index) => {
                                 const active = pathname === item.href;
                                 return (
                                     <motion.div
                                         key={item.href}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.05, duration: 0.2 }}
+                                        initial={{ opacity: 0, y: 15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.06, duration: 0.3 }}
                                     >
                                         <Link
                                             href={item.href}
                                             onClick={() => setOpen(false)}
-                                            className={`block py-4 text-xl font-medium border-b border-white/10 transition-colors ${active
+                                            className={`block py-5 text-2xl font-light tracking-wide border-b border-white/10 ${active
                                                     ? "text-[rgb(var(--brandWine))]"
-                                                    : "text-white/90"
+                                                    : "text-white"
                                                 }`}
                                         >
                                             {item.label}
@@ -96,16 +95,21 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                             })}
                         </nav>
 
-                        {/* Bottom CTA */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 pb-10">
+                        {/* CTA at bottom */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.35, duration: 0.3 }}
+                            className="absolute bottom-0 left-0 right-0 p-8 pb-12"
+                        >
                             <Link
                                 href="/rezervasyon"
                                 onClick={() => setOpen(false)}
-                                className="flex h-14 w-full items-center justify-center rounded-xl bg-[rgb(var(--brandWine))] text-lg font-bold text-white shadow-lg"
+                                className="flex h-14 w-full items-center justify-center rounded-lg bg-[rgb(var(--brandWine))] text-base font-semibold text-white"
                             >
                                 Rezervasyon Yap
                             </Link>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
