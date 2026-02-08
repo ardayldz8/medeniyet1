@@ -21,8 +21,8 @@ export function HeroMobile() {
             {/* Simple vertical gradient for mobile */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
 
-            {/* Content positioned at bottom */}
-            <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-6">
+            {/* Content positioned at bottom with safe area */}
+            <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-10">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -72,22 +72,22 @@ export function HeroMobile() {
                         Günlük taze et seçimi, kontrollü pişirim ve sıcak servis.
                     </motion.p>
 
-                    {/* CTA buttons - stacked for mobile */}
+                    {/* CTA buttons - inline for mobile */}
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="mt-5 flex flex-col gap-2"
+                        className="mt-5 flex gap-3"
                     >
                         <a
                             href="/rezervasyon"
-                            className="flex h-11 items-center justify-center rounded-lg bg-[rgb(var(--brandWine))] px-6 text-sm font-semibold text-white"
+                            className="inline-flex h-10 items-center justify-center rounded-lg bg-[rgb(var(--brandWine))] px-5 text-sm font-semibold text-white"
                         >
                             Rezervasyon
                         </a>
                         <a
                             href="/menu"
-                            className="flex h-11 items-center justify-center rounded-lg border border-white/20 bg-black/20 px-6 text-sm font-medium text-white/90 backdrop-blur"
+                            className="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 text-sm font-medium text-white/90"
                         >
                             Menüyü Gör
                         </a>

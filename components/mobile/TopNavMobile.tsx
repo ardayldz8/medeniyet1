@@ -21,14 +21,14 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
     return (
         <header
             className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${scrolled
-                    ? "bg-[rgb(var(--bg))/0.95] shadow-[0_4px_30px_rgba(0,0,0,0.45)] backdrop-blur-lg"
-                    : "bg-transparent"
+                ? "bg-[rgb(var(--bg))/0.95] shadow-[0_4px_30px_rgba(0,0,0,0.45)] backdrop-blur-lg"
+                : "bg-transparent"
                 }`}
         >
             <div className="flex h-[60px] items-center justify-between px-4">
                 {/* Logo */}
-                <Link href="/" aria-label="Ana sayfa">
-                    <Brand className="h-[48px] w-[180px]" />
+                <Link href="/" aria-label="Ana sayfa" className="-ml-2">
+                    <Brand className="h-[40px] w-[160px]" />
                 </Link>
 
                 {/* Menu button */}
@@ -97,8 +97,8 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                                                 href={item.href}
                                                 onClick={() => setOpen(false)}
                                                 className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${active
-                                                        ? "bg-[rgb(var(--brandWine))/0.15] text-white"
-                                                        : "text-white/80 hover:bg-white/5"
+                                                    ? "bg-[rgb(var(--brandWine))/0.15] text-white"
+                                                    : "text-white/80 hover:bg-white/5"
                                                     }`}
                                             >
                                                 {item.label}
