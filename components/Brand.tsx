@@ -21,7 +21,7 @@ export function Brand({ className = "", priority = true }: BrandProps) {
         height={96}
         priority={priority}
         className={cn(
-          "object-cover object-left opacity-100 drop-shadow-[0_14px_28px_rgba(0,0,0,0.70)]",
+          "object-contain opacity-100 drop-shadow-[0_14px_28px_rgba(0,0,0,0.70)]",
           className
         )}
       />
