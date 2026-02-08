@@ -54,7 +54,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-[80px] md:pt-[104px]">
+      <section className="relative overflow-hidden pt-[104px]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image

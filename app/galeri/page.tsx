@@ -30,7 +30,7 @@ export default function GalleryPage() {
   };
 
   return (
-    <main className="min-h-screen pt-[80px] md:pt-[104px]">
+    <main className="min-h-screen pt-[104px]">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[rgb(var(--brand))/0.15] via-transparent to-transparent" />

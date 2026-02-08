@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <video
-        className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
+        className="absolute inset-0 h-full w-full object-cover object-[70%_center] md:object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
         autoPlay
         muted
         loop
@@ -23,12 +23,12 @@ export function Hero() {
 
       {/* Use a responsive gutter so the hero copy can sit closer to the left edge on wide screens. */}
       <div className="relative z-10 w-full px-[clamp(1rem,6vw,8rem)]">
-        <div className="flex min-h-screen items-start pt-44 pb-16 md:pt-48 md:pb-24">
+        <div className="flex min-h-screen items-center md:items-start pt-24 pb-16 md:pt-48 md:pb-24">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="max-w-[46rem] md:ml-14 lg:ml-16"
+            className="max-w-[46rem] px-2 md:px-0 md:ml-14 lg:ml-16"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
