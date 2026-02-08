@@ -26,10 +26,10 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                 }`}
         >
             {/* Navbar - 72px height with proper padding */}
-            <div className="flex h-[72px] items-center justify-between px-5">
+            <div className="flex h-[100px] items-center justify-between px-5">
                 {/* Logo - properly sized and vertically centered */}
                 <Link href="/" aria-label="Ana sayfa">
-                    <Brand className="h-20 w-auto" />
+                    <Brand className="h-40 w-auto" />
                 </Link>
 
                 {/* Premium hamburger - thin lines, no background */}
@@ -68,7 +68,7 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 top-[72px] z-50 bg-black/98"
+                        className="fixed inset-0 top-[100px] z-50 bg-black/98"
                     >
                         <nav className="flex flex-col px-8 pt-8" aria-label="Mobil menü">
                             {nav.map((item, index) => {
