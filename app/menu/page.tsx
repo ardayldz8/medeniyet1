@@ -50,10 +50,10 @@ export default function MenuPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="pt-[104px]"
+            className="pt-[80px]"
           >
             {/* Back button and category header */}
-            <div className="sticky top-[104px] z-40 border-b border-white/[0.06] bg-[rgb(var(--bg)/0.9)] backdrop-blur-xl">
+            <div className="sticky top-[80px] z-40 border-b border-white/[0.06] bg-[rgb(var(--bg)/0.9)] backdrop-blur-xl">
               <div className="mx-auto max-w-screen-2xl px-4 py-4 md:px-8">
                 <div className="flex items-center gap-4">
                   <button
