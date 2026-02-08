@@ -60,7 +60,7 @@ export function TopNav() {
           : "bg-transparent"
       )}
     >
-      <div className="relative h-[104px]">
+      <div className="relative h-[80px]">
         {/* Logo - pinned left with hover effect */}
         <Link
           href="/"
@@ -71,11 +71,11 @@ export function TopNav() {
             "drop-shadow-[0_10px_28px_rgba(0,0,0,0.70)]"
           )}
         >
-          <Brand className="h-[84px] w-[430px] md:h-[96px] md:w-[560px]" />
+          <Brand className="h-[64px] w-[320px] md:h-[72px] md:w-[420px]" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="mx-auto flex h-[104px] w-full max-w-screen-2xl items-center px-3 md:px-6 lg:px-8 md:pl-[620px] md:pr-[220px]">
+        <div className="mx-auto flex h-[80px] w-full max-w-screen-2xl items-center px-3 md:px-6 lg:px-8 md:pl-[480px] md:pr-[180px]">
           <nav
             className="hidden flex-1 items-center justify-center gap-8 md:flex"
             aria-label="Üst menü"
