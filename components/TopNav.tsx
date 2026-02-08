@@ -188,7 +188,7 @@ export function TopNav() {
               exit={{ opacity: 0, x: 50, scale: 0.98 }}
               transition={{ type: "spring", damping: 28, stiffness: 300 }}
               className={cn(
-                "fixed right-4 top-[120px] z-[60] w-[min(90vw,340px)] md:hidden",
+                "fixed inset-x-4 top-[120px] z-[60] mx-auto max-w-sm md:hidden",
                 "overflow-hidden rounded-2xl",
                 "border border-white/10 bg-[rgb(var(--bg))]",
                 "shadow-[0_24px_80px_rgba(0,0,0,0.7)]",
@@ -230,7 +230,7 @@ export function TopNav() {
                         href={item.href}
                         onClick={() => setOpen(false)}
                         className={cn(
-                          "flex items-center justify-between rounded-xl px-4 py-3.5",
+                          "block rounded-xl px-4 py-3.5",
                           "transition-all duration-200",
                           active
                             ? "bg-[rgb(var(--brandWine))/0.15] text-white"
@@ -238,16 +238,6 @@ export function TopNav() {
                         )}
                       >
                         <span className="font-medium">{item.label}</span>
-                        {active ? (
-                          <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[rgb(var(--brandWine))]">
-                            <span className="h-1.5 w-1.5 rounded-full bg-current" />
-                            Aktif
-                          </span>
-                        ) : (
-                          <span className="text-white/30 transition-transform group-hover:translate-x-1">
-                            →
-                          </span>
-                        )}
                       </Link>
                     </motion.div>
                   );

@@ -54,7 +54,7 @@ export function Hero() {
             >
               Ustalığın İzi
               <br />
-              <span className="inline-flex items-baseline">
+              <span className="inline-flex flex-wrap items-baseline">
                 <span>Izgaranın&nbsp;</span>
                 <RotatingText
                   texts={["Klasikleri", "Ateşi", "Lezzeti", "Geleneği"]}
@@ -77,7 +77,7 @@ export function Hero() {
                   staggerDuration={0.032}
                   staggerFrom="first"
                   // Mask at the word level to avoid clipping descenders like "ş/ğ/g".
-                  mainClassName="inline-flex flex-nowrap whitespace-nowrap align-baseline min-w-[10ch] overflow-hidden pb-[0.22em] -mb-[0.22em]"
+                  mainClassName="inline-flex flex-nowrap whitespace-nowrap align-baseline min-w-[8ch] sm:min-w-[10ch] overflow-hidden pb-[0.22em] -mb-[0.22em]"
                   elementLevelClassName="italic text-[rgb(var(--brandWine))] [text-shadow:0_12px_28px_rgba(0,0,0,0.55)]"
                   splitLevelClassName=""
                 />
