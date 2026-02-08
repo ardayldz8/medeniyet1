@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <video
-        className="absolute inset-0 h-full w-full object-cover object-[70%_center] md:object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
+        className="absolute inset-0 h-full w-full object-cover object-[50%_50%] md:object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
         autoPlay
         muted
         loop
@@ -19,11 +19,11 @@ export function Hero() {
       </video>
 
       {/* Wolfgang-like: left-weighted dark overlay + gentle vignette */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.82),rgba(0,0,0,0.12)_56%,rgba(0,0,0,0.56)),linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.88))]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:bg-[linear-gradient(90deg,rgba(0,0,0,0.82),rgba(0,0,0,0.12)_56%,rgba(0,0,0,0.56)),linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.88))]" />
 
       {/* Use a responsive gutter so the hero copy can sit closer to the left edge on wide screens. */}
       <div className="relative z-10 w-full px-[clamp(1rem,6vw,8rem)]">
-        <div className="flex min-h-screen items-center md:items-start pt-24 pb-16 md:pt-48 md:pb-24">
+        <div className="flex min-h-screen items-end pb-24 md:items-start md:pt-48 md:pb-24">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,7 +34,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-2 sm:gap-3"
+              className="hidden md:flex flex-wrap items-center gap-2 sm:gap-3"
             >
               <div className="text-[14px] font-semibold uppercase tracking-[0.34em] text-white/70 md:text-[15px]">
                 Medeniyet Kasap &amp; Izgara
