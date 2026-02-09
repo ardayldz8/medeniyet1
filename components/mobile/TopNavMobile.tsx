@@ -39,10 +39,10 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                     : "bg-gradient-to-b from-black/80 to-transparent"
                     }`}
             >
-                <div className="flex h-20 items-center justify-between px-4">
+                <div className="flex h-24 items-center justify-between px-4">
                     {/* Logo */}
                     <Link href="/" aria-label="Ana sayfa" onClick={() => setOpen(false)}>
-                        <Brand className="h-16" />
+                        <Brand className="h-[96px]" />
                     </Link>
 
                     {/* Hamburger button */}
@@ -82,7 +82,7 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-0 z-[99] bg-black pt-20"
+                        className="fixed inset-0 z-[99] bg-black pt-24"
                     >
                         {/* Menu links */}
                         <nav className="flex flex-col p-6" aria-label="Mobil menü">

@@ -2,20 +2,35 @@
 
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
+import Image from "next/image";
+import { useState } from "react";
 
 export function HeroMobile() {
+    const [videoReady, setVideoReady] = useState(false);
+
     return (
         <section className="relative h-[100svh] overflow-hidden">
+            <Image
+                src="/hero-poster.jpg"
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9]"
+            />
             <video
-                className="absolute inset-0 h-full w-full object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9]"
+                className={`absolute inset-0 h-full w-full object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
                 autoPlay
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="auto"
                 poster="/hero-poster.jpg"
+                onCanPlay={() => setVideoReady(true)}
+                onLoadedData={() => setVideoReady(true)}
             >
-                <source src="/hero.mp4" type="video/mp4" />
+                <source src="/hero-mobile.webm" type="video/webm" />
+                <source src="/hero-mobile.mp4" type="video/mp4" />
             </video>
 
             {/* Simple vertical gradient for mobile */}
