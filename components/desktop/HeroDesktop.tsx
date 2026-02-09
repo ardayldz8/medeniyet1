@@ -49,13 +49,13 @@ export function HeroDesktop() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="flex items-center gap-3"
+                            className="flex flex-wrap items-center gap-3"
                         >
-                            <div className="text-sm font-semibold uppercase tracking-[0.28em] text-white/60">
+                            <div className="text-[15px] font-semibold uppercase tracking-[0.34em] text-white/70">
                                 Medeniyet Kasap &amp; Izgara
                             </div>
-                            <div className="h-px w-10 bg-white/30" />
-                            <div className="text-sm font-medium uppercase tracking-[0.24em] text-white/45">
+                            <div className="h-px w-14 bg-white/22" />
+                            <div className="text-[15px] font-medium uppercase tracking-[0.30em] text-white/50">
                                 Eyüpsultan, Çırçır
                             </div>
                         </motion.div>
@@ -65,33 +65,34 @@ export function HeroDesktop() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="mt-7 font-[var(--font-heading)] text-7xl font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] lg:text-8xl"
+                            className="mt-7 font-[var(--font-heading)] text-6xl font-semibold leading-[0.98] tracking-[-0.02em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.60)] lg:text-7xl"
                             aria-label="Ustalığın İzi, Izgaranın Klasikleri, Ateşi, Lezzeti, Geleneği."
                         >
                             Ustalığın İzi
                             <br />
-                            Izgaranın
-                            <br />
-                            <RotatingText
-                                texts={["Klasikleri", "Ateşi", "Lezzeti", "Geleneği"]}
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 320,
-                                    damping: 42,
-                                    mass: 0.85,
-                                    bounce: 0
-                                }}
-                                initial={{ opacity: 0, y: "-140%" }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: "140%" }}
-                                rotationInterval={5200}
-                                splitBy="characters"
-                                staggerDuration={0.032}
-                                staggerFrom="first"
-                                mainClassName="inline-flex flex-nowrap whitespace-nowrap align-baseline min-w-[10ch] overflow-hidden pb-[0.22em] -mb-[0.22em]"
-                                elementLevelClassName="italic text-[rgb(var(--brandWine))] [text-shadow:0_12px_28px_rgba(0,0,0,0.55)]"
-                                splitLevelClassName=""
-                            />
+                            <span className="inline-flex items-baseline">
+                                <span>Izgaranın&nbsp;</span>
+                                <RotatingText
+                                    texts={["Klasikleri", "Ateşi", "Lezzeti", "Geleneği"]}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 320,
+                                        damping: 42,
+                                        mass: 0.85,
+                                        bounce: 0
+                                    }}
+                                    initial={{ opacity: 0, y: "-140%" }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: "140%" }}
+                                    rotationInterval={5200}
+                                    splitBy="characters"
+                                    staggerDuration={0.032}
+                                    staggerFrom="first"
+                                    mainClassName="inline-flex flex-nowrap whitespace-nowrap align-baseline min-w-[10ch] overflow-hidden pb-[0.22em] -mb-[0.22em]"
+                                    elementLevelClassName="italic text-[rgb(var(--brandWine))] [text-shadow:0_12px_28px_rgba(0,0,0,0.55)]"
+                                    splitLevelClassName=""
+                                />
+                            </span>
                         </motion.h1>
 
                         {/* Description */}
@@ -99,7 +100,7 @@ export function HeroDesktop() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.5 }}
-                            className="mt-6 max-w-2xl text-2xl leading-relaxed text-white/72"
+                            className="mt-6 max-w-2xl text-xl leading-relaxed text-white/72"
                         >
                             Günlük taze et seçimi, kontrollü pişirim ve sıcak servis. Menüyü inceleyin,
                             masanızı ayırtın.
@@ -131,7 +132,7 @@ export function HeroDesktop() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.9 }}
-                            className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-lg font-medium uppercase tracking-[0.20em] text-white/55"
+                            className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-base font-medium uppercase tracking-[0.20em] text-white/55"
                         >
                             <span>Kasap</span>
                             <span>Izgara</span>
