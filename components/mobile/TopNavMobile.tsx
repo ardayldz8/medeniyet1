@@ -35,14 +35,14 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
             {/* Fixed header */}
             <header
                 className={`fixed inset-x-0 top-0 z-[100] transition-all duration-300 ${scrolled || open
-                        ? "bg-black"
-                        : "bg-gradient-to-b from-black/80 to-transparent"
+                    ? "bg-black"
+                    : "bg-gradient-to-b from-black/80 to-transparent"
                     }`}
             >
-                <div className="flex h-[90px] items-center justify-between px-4">
+                <div className="flex h-20 items-center justify-between px-4">
                     {/* Logo */}
                     <Link href="/" aria-label="Ana sayfa" onClick={() => setOpen(false)}>
-                        <Brand className="h-16 w-auto" />
+                        <Brand className="h-16" />
                     </Link>
 
                     {/* Hamburger button */}
@@ -82,7 +82,7 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-0 z-[99] bg-black pt-[90px]"
+                        className="fixed inset-0 z-[99] bg-black pt-20"
                     >
                         {/* Menu links */}
                         <nav className="flex flex-col p-6" aria-label="Mobil menü">
@@ -99,8 +99,8 @@ export function TopNavMobile({ scrolled }: { scrolled: boolean }) {
                                             href={item.href}
                                             onClick={() => setOpen(false)}
                                             className={`block py-4 text-xl font-medium border-b border-white/10 ${active
-                                                    ? "text-[rgb(var(--brandWine))]"
-                                                    : "text-white"
+                                                ? "text-[rgb(var(--brandWine))]"
+                                                : "text-white"
                                                 }`}
                                         >
                                             {item.label}

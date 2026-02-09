@@ -11,20 +11,19 @@ interface BrandProps {
   priority?: boolean;
 }
 
-export function Brand({ className = "", priority = true }: BrandProps) {
+export function Brand({ className = "", priority = false }: BrandProps) {
   return (
-    <div className="flex items-center">
-      <Image
-        src="/brand-2.svg"
-        alt="Medeniyet Kasap & Izgara"
-        width={560}
-        height={96}
-        priority={priority}
-        className={cn(
-          "object-contain opacity-100 drop-shadow-[0_14px_28px_rgba(0,0,0,0.70)]",
-          className
-        )}
-      />
-    </div>
+    <Image
+      src="/brand-logo.svg"
+      alt="Medeniyet Kasap & Izgara"
+      width={181}
+      height={100}
+      priority={priority}
+      sizes="(min-width: 768px) 220px, 170px"
+      className={cn(
+        "h-10 w-auto drop-shadow-[0_14px_28px_rgba(0,0,0,0.70)]",
+        className
+      )}
+    />
   );
 }
