@@ -3,10 +3,19 @@
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function HeroDesktop() {
     const [videoReady, setVideoReady] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        // Force eager load & play
+        video.load();
+        video.play().catch(() => { });
+    }, []);
 
     return (
         <section className="relative min-h-screen overflow-hidden">
@@ -19,15 +28,15 @@ export function HeroDesktop() {
                 className="object-cover object-center brightness-[0.72] contrast-[1.08] saturate-[0.9]"
             />
             <video
-                className={`absolute inset-0 h-full w-full object-cover object-center brightness-[0.72] contrast-[1.08] saturate-[0.9] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
+                ref={videoRef}
+                className={`absolute inset-0 h-full w-full object-cover object-center brightness-[0.72] contrast-[1.08] saturate-[0.9] transition-opacity duration-500 ${videoReady ? "opacity-100" : "opacity-0"}`}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="auto"
-                poster="/hero-poster.jpg"
-                onCanPlay={() => setVideoReady(true)}
                 onLoadedData={() => setVideoReady(true)}
+                onPlaying={() => setVideoReady(true)}
             >
                 <source src="/hero-desktop.webm" type="video/webm" />
                 <source src="/hero-desktop.mp4" type="video/mp4" />

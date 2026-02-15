@@ -16,10 +16,10 @@ export function Brand({ className = "", priority = false }: BrandProps) {
     <Image
       src="/brand-logo.svg"
       alt="Medeniyet Kasap & Izgara"
-      width={181}
-      height={100}
+      width={544}
+      height={300}
       priority={priority}
-      sizes="(min-width: 768px) 220px, 170px"
+      unoptimized
       className={cn(
         "h-10 w-auto drop-shadow-[0_14px_28px_rgba(0,0,0,0.70)]",
         className

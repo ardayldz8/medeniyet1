@@ -3,10 +3,18 @@
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function HeroMobile() {
     const [videoReady, setVideoReady] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.load();
+        video.play().catch(() => { });
+    }, []);
 
     return (
         <section className="relative h-[100svh] overflow-hidden">
@@ -19,15 +27,15 @@ export function HeroMobile() {
                 className="object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9]"
             />
             <video
-                className={`absolute inset-0 h-full w-full object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
+                ref={videoRef}
+                className={`absolute inset-0 h-full w-full object-cover object-[65%_center] brightness-[0.65] contrast-[1.08] saturate-[0.9] transition-opacity duration-500 ${videoReady ? "opacity-100" : "opacity-0"}`}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="auto"
-                poster="/hero-poster.jpg"
-                onCanPlay={() => setVideoReady(true)}
                 onLoadedData={() => setVideoReady(true)}
+                onPlaying={() => setVideoReady(true)}
             >
                 <source src="/hero-mobile.webm" type="video/webm" />
                 <source src="/hero-mobile.mp4" type="video/mp4" />
