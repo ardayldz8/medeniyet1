@@ -7,10 +7,7 @@ const contactInfo = {
   phone: "+90 536 924 32 13",
   whatsapp: "905369243213",
   address: "Güngören Cad. No:3, Çırçır Mah., Eyüpsultan, İstanbul",
-  hours: {
-    weekday: "11:00 - 23:00",
-    weekend: "11:00 - 00:00",
-  },
+  hours: "08:00 - 00:00",
   mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.912776968842!2d28.93199!3d41.05722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab0f2a8c7c9c1%3A0x7e4a0b4c0c0c0c0c!2sG%C3%BCng%C3%B6ren%20Cad.%2C%20%C3%87%C4%B1r%C3%A7%C4%B1r%2C%20Ey%C3%BCpsultan%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1707400000000!5m2!1str!2str",
 };
 
@@ -178,8 +175,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-semibold text-white">Çalışma Saatleri</h4>
-                <p className="mt-1 text-white/50">Hafta içi: {contactInfo.hours.weekday}</p>
-                <p className="text-white/50">Hafta sonu: {contactInfo.hours.weekend}</p>
+                <p className="mt-1 text-white/50">Her gün: {contactInfo.hours}</p>
               </div>
             </div>
           </motion.div>
@@ -196,7 +192,7 @@ export default function ContactPage() {
           className="overflow-hidden rounded-2xl border border-white/[0.06]"
         >
           <div className="bg-[rgb(var(--panel))] px-6 py-4">
-            <h3 className="text-lg font-semibold text-white">📍 Konum</h3>
+            <h3 className="text-lg font-semibold text-white">Konum</h3>
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.5!2d28.931!3d41.057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAzJzI1LjIiTiAyOMKwNTUnNTEuNiJF!5e0!3m2!1str!2str!4v1707400000000!5m2!1str!2str"

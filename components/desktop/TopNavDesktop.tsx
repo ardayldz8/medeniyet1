@@ -23,14 +23,14 @@ export function TopNavDesktop({ scrolled }: { scrolled: boolean }) {
                 : "bg-transparent"
                 }`}
         >
-            <div className="grid w-full -translate-y-8 grid-cols-[1fr_auto_1fr] items-center px-4 pt-0 pb-2 lg:px-8">
+            <div className={`grid w-full grid-cols-[1fr_auto_1fr] items-center px-4 lg:px-8 transition-all duration-300 ${scrolled ? "py-1" : "-translate-y-8 pt-0 pb-2"}`}>
                 {/* Logo - Left */}
                 <Link
                     href="/"
                     aria-label="Ana sayfa"
                     className="justify-self-start flex-shrink-0 transition-all duration-300 hover:scale-[1.02]"
                 >
-                    <Brand className="h-40" />
+                    <Brand className={`transition-all duration-300 ${scrolled ? "h-16" : "h-40"}`} />
                 </Link>
 
                 {/* Navigation - Center */}
@@ -41,7 +41,7 @@ export function TopNavDesktop({ scrolled }: { scrolled: boolean }) {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`relative py-2 text-sm font-semibold uppercase tracking-[0.18em] leading-none transition-colors duration-300 group ${active ? "text-white" : "text-white/70 hover:text-white"
+                                className={`relative py-2 font-semibold uppercase leading-none transition-all duration-300 group ${scrolled ? "text-xs tracking-[0.15em]" : "text-sm tracking-[0.18em]"} ${active ? "text-white" : "text-white/70 hover:text-white"
                                     }`}
                             >
                                 {item.label}
@@ -62,7 +62,7 @@ export function TopNavDesktop({ scrolled }: { scrolled: boolean }) {
                 {/* CTA Button - Right */}
                 <Link
                     href="/rezervasyon"
-                    className="justify-self-end flex-shrink-0 inline-flex h-14 items-center justify-center gap-2 rounded-lg bg-[rgb(var(--brandWine))] px-8 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.50)] ring-1 ring-white/10 transition-all duration-300 hover:bg-[rgb(var(--brandWine)/0.9)]"
+                    className={`justify-self-end flex-shrink-0 inline-flex items-center justify-center gap-2 rounded-lg bg-[rgb(var(--brandWine))] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.50)] ring-1 ring-white/10 transition-all duration-300 hover:bg-[rgb(var(--brandWine)/0.9)] ${scrolled ? "h-10 px-5 text-sm" : "h-14 px-8 text-lg"}`}
                 >
                     Rezervasyon
                 </Link>

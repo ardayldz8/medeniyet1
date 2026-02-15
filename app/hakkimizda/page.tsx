@@ -319,11 +319,11 @@ export default function AboutPage() {
             {/* Stats mini */}
             <div className="mt-12 flex flex-wrap justify-center gap-8 border-t border-white/20 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">4.8★</div>
+                <div className="text-2xl font-bold text-white">3.5★</div>
                 <div className="text-xs text-white/60">Müşteri Puanı</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">11:00-00:00</div>
+                <div className="text-2xl font-bold text-white">08:00-00:00</div>
                 <div className="text-xs text-white/60">Her Gün Açık</div>
               </div>
               <div className="text-center">
