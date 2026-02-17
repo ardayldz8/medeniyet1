@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { MenuHero } from "@/components/menu/MenuHero";
 import { CategoryGrid } from "@/components/menu/CategoryGrid";
 import { MenuCard } from "@/components/menu/MenuCard";
+import { MenuQrSection } from "@/components/common/MenuQrSection";
 import { categories, menuItems } from "@/data/menu-items";
 
 export default function MenuPage() {
@@ -25,6 +26,7 @@ export default function MenuPage() {
   return (
     <main className="min-h-screen">
       {!selectedCategory && <MenuHero />}
+      <MenuQrSection compact />
 
       <AnimatePresence mode="wait">
         {!selectedCategory ? (

@@ -5,12 +5,9 @@ import Link from "next/link";
 import { motion } from "motion/react";
 
 const previewImages = [
-    { id: 1, src: "/gallery/gallery-1.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 1" },
-    { id: 2, src: "/gallery/gallery-2.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 2" },
-    { id: 4, src: "/gallery/gallery-4.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 4" },
-    { id: 6, src: "/gallery/gallery-6.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 6" },
-    { id: 7, src: "/gallery/gallery-7.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 7" },
-    { id: 11, src: "/gallery/gallery-11.jpg", alt: "Medeniyet Kasap & Izgara - Görsel 11" },
+    { id: 5, src: "/gallery/gallery-5.jpg", alt: "Medeniyet Kasap & Izgara - Ozel Salon" },
+    { id: 4, src: "/gallery/gallery-4.jpg", alt: "Medeniyet Kasap & Izgara - Kasap Reyonu" },
+    { id: 6, src: "/gallery/gallery-6.jpg", alt: "Medeniyet Kasap & Izgara - Restoran" },
 ];
 
 export function GalleryPreview() {
@@ -40,7 +37,7 @@ export function GalleryPreview() {
                 </motion.div>
 
                 {/* Image Grid */}
-                <div className="mt-12 grid gap-4 grid-cols-2 lg:grid-cols-3">
+                <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
                     {previewImages.map((image, index) => (
                         <motion.div
                             key={image.id}

@@ -10,7 +10,7 @@ export default function ReservationPage() {
       <section className="relative flex min-h-[65vh] items-end overflow-hidden pb-24 pt-32 md:min-h-[60vh] md:pb-32 md:pt-40">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/gallery-3.jpg"
+            src="/gallery/gallery-5.jpg"
             alt="Medeniyet Kasap & Izgara"
             fill
             className="object-cover object-center"
@@ -264,7 +264,7 @@ export default function ReservationPage() {
             {/* Restaurant image */}
             <div className="relative h-56 overflow-hidden rounded-2xl border border-white/[0.06]">
               <Image
-                src="/gallery/gallery-1.jpg"
+                src="/gallery/gallery-4.jpg"
                 alt="Medeniyet Kasap & Izgara mekan"
                 fill
                 className="object-cover"

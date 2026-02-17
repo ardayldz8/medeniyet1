@@ -4,6 +4,8 @@ import { CustomerReviews } from "@/components/home/CustomerReviews";
 import { StoryPreview } from "@/components/home/StoryPreview";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { ContactCTA } from "@/components/home/ContactCTA";
+import { OnlineOrderLinks } from "@/components/home/OnlineOrderLinks";
+import { MenuQrSection } from "@/components/common/MenuQrSection";
 
 export default function HomePage() {
   return (
@@ -13,6 +15,8 @@ export default function HomePage() {
       <CustomerReviews />
       <StoryPreview />
       <GalleryPreview />
+      <OnlineOrderLinks />
+      <MenuQrSection />
       <ContactCTA />
     </main>
   );

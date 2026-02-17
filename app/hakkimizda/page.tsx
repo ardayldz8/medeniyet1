@@ -58,7 +58,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/gallery/gallery-5.jpg"
+            src="/gallery/gallery-6.jpg"
             alt="Medeniyet Kasap & Izgara"
             fill
             className="object-cover"
@@ -102,10 +102,10 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl"
             >
-              İstanbul&apos;un kalbinde, Eyüpsultan Çırçır&apos;da geleneksel Türk mutfağının
-              en lezzetli örneklerini sizlerle buluşturuyoruz.
-              Taze et seçimimiz, ustalıkla hazırlanan ızgaralarımız ve sıcak misafirperverliğimizle
-              her ziyaretinizi unutulmaz bir lezzet deneyimine dönüştürüyoruz.
+              Medeniyet Kasap & Izgara olarak, her gün taze ve kaliteli etleri özenle seçiyor,
+              geleneksel tarifleri ustalıkla hazırlıyoruz. Dana porsiyonlarımızdan kuzu
+              çeşitlerimize, hamburgerlerimizden kebap seçeneklerimize kadar geniş menümüzle her
+              damak zevkine hitap ediyoruz.
             </motion.p>
           </motion.div>
         </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <Image
-              src="/gallery/gallery-3.jpg"
+              src="/gallery/gallery-5.jpg"
               alt="Mekanımız"
               fill
               className="object-cover"
@@ -177,12 +177,17 @@ export default function AboutPage() {
               </p>
               <p>
                 Dana porsiyonlarımızdan kuzu çeşitlerimize, hamburgerlerimizden kebap
-                çeşitlerimize kadar geniş menümüzle her damak zevkine hitap ediyoruz.
+                seçeneklerimize kadar geniş menümüzle her damak zevkine hitap ediyoruz.
               </p>
               <p>
-                Müşterilerimize sadece yemek değil, bir lezzet deneyimi sunmayı
-                amaçlıyoruz. Sıcak atmosferimiz ve güler yüzlü hizmetimizle
-                sizi ağırlamaktan mutluluk duyuyoruz.
+                Şimdi ise yeni konseptimizle birlikte lezzet anlayışımızı bir adım daha ileri
+                taşıyoruz. Premium kahvaltı sunumlarımız ve özenle hazırlanan, zengin çeşitliliğe
+                sahip mezelerimizle sadece bir restoran değil, ayrıcalıklı bir gastronomi deneyimi
+                sunmayı hedefliyoruz.
+              </p>
+              <p>
+                Müşterilerimize sadece yemek değil; kalite, özen ve unutulmaz bir deneyim
+                sunuyor, sıcak atmosferimizle sizleri ağırlamaktan mutluluk duyuyoruz.
               </p>
             </div>
           </motion.div>

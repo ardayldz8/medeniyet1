@@ -50,7 +50,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/gallery/gallery-1.jpg"
+            src="/gallery/gallery-4.jpg"
             alt="Medeniyet Kasap & Izgara"
             fill
             className="object-cover"

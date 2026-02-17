@@ -5,27 +5,29 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 
 // Gallery images
-const galleryImages = Array.from({ length: 11 }, (_, i) => ({
-  id: i + 1,
-  src: `/gallery/gallery-${i + 1}.jpg`,
-  alt: `Medeniyet Kasap & Izgara - Görsel ${i + 1}`,
-}));
+const galleryImages = [
+  { id: 5, src: "/gallery/gallery-5.jpg", alt: "Medeniyet Kasap & Izgara - Ozel Alan" },
+  { id: 4, src: "/gallery/gallery-4.jpg", alt: "Medeniyet Kasap & Izgara - Ozel Alan" },
+  { id: 6, src: "/gallery/gallery-6.jpg", alt: "Medeniyet Kasap & Izgara - Restoran" },
+];
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  const openLightbox = (id: number) => setSelectedImage(id);
-  const closeLightbox = () => setSelectedImage(null);
+  const openLightbox = (index: number) => setSelectedImageIndex(index);
+  const closeLightbox = () => setSelectedImageIndex(null);
 
   const goToNext = () => {
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage % galleryImages.length) + 1);
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % galleryImages.length);
     }
   };
 
   const goToPrev = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 1 ? galleryImages.length : selectedImage - 1);
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex(
+        selectedImageIndex === 0 ? galleryImages.length - 1 : selectedImageIndex - 1
+      );
     }
   };
 
@@ -79,7 +81,7 @@ export default function GalleryPage() {
               className="mb-4 break-inside-avoid"
             >
               <button
-                onClick={() => openLightbox(image.id)}
+                onClick={() => openLightbox(index)}
                 className="group relative block w-full overflow-hidden rounded-xl border border-white/[0.06] transition-all duration-300 hover:border-[rgb(var(--brandWine)/0.5)] hover:shadow-xl hover:shadow-[rgb(var(--brandWine)/0.15)]"
               >
                 <Image
@@ -105,7 +107,7 @@ export default function GalleryPage() {
 
       {/* Lightbox */}
       <AnimatePresence>
-        {selectedImage !== null && (
+        {selectedImageIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -137,7 +139,7 @@ export default function GalleryPage() {
 
             {/* Image */}
             <motion.div
-              key={selectedImage}
+              key={galleryImages[selectedImageIndex].id}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -146,8 +148,8 @@ export default function GalleryPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={`/gallery/gallery-${selectedImage}.jpg`}
-                alt={`Görsel ${selectedImage}`}
+                src={galleryImages[selectedImageIndex].src}
+                alt={galleryImages[selectedImageIndex].alt}
                 width={1200}
                 height={800}
                 className="max-h-[85vh] w-auto rounded-lg object-contain"
@@ -156,7 +158,7 @@ export default function GalleryPage() {
 
             {/* Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
-              {selectedImage} / {galleryImages.length}
+              {selectedImageIndex + 1} / {galleryImages.length}
             </div>
           </motion.div>
         )}

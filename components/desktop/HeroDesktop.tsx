@@ -3,6 +3,7 @@
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 export function HeroDesktop() {
@@ -123,16 +124,32 @@ export function HeroDesktop() {
                             className="mt-10 flex flex-wrap items-center gap-3"
                         >
                             <a
-                                href="/rezervasyon"
+                                href="https://wa.me/905369243213"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex h-12 items-center justify-center rounded-xl bg-[rgb(var(--brandWine))] px-9 text-lg font-semibold text-white shadow-[0_10px_34px_rgba(0,0,0,0.62)] ring-1 ring-white/10 hover:bg-[rgb(var(--brandWine)/0.92)]"
                             >
-                                Rezervasyon
+                                WhatsApp ile Rezervasyon
                             </a>
                             <a
+                                href="tel:+905369243213"
+                                className="inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-black/10 px-9 text-lg font-semibold text-white/85 backdrop-blur hover:bg-white/10"
+                            >
+                                Telefon ile Rezervasyon
+                            </a>
+                            <Link
                                 href="/menu"
                                 className="inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-black/10 px-9 text-lg font-semibold text-white/85 backdrop-blur hover:bg-white/10"
                             >
                                 Menüyü Gör
+                            </Link>
+                            <a
+                                href="https://maps.google.com/?q=Medeniyet+Kasap+Izgara+Eyupsultan"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-black/10 px-9 text-lg font-semibold text-white/85 backdrop-blur hover:bg-white/10"
+                            >
+                                Google Maps
                             </a>
                         </motion.div>
 

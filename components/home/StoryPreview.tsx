@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -8,53 +7,13 @@ export function StoryPreview() {
     return (
         <section className="relative py-20 md:py-28">
             <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                <div className="grid items-center gap-12 lg:grid-cols-2">
-                    {/* Image */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        className="relative"
-                    >
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                            <Image
-                                src="/gallery/gallery-5.jpg"
-                                alt="Medeniyet Kasap & Izgara mekanı"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-                        </div>
-
-                        {/* Floating stat card */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            className="absolute -bottom-6 -right-4 rounded-2xl border border-white/10 bg-[rgb(var(--panel)/0.9)] p-5 shadow-2xl backdrop-blur-xl md:-right-8"
-                        >
-                            <div className="text-3xl font-bold text-[rgb(var(--brandWine))]">
-                                120+
-                            </div>
-                            <div className="mt-1 text-xs font-medium uppercase tracking-wider text-white/50">
-                                Çeşit Lezzet
-                            </div>
-                        </motion.div>
-
-                        {/* Decorative glow */}
-                        <div className="absolute -left-8 -top-8 h-32 w-32 rounded-full bg-[rgb(var(--brandWine)/0.12)] blur-3xl" />
-                    </motion.div>
-
-                    {/* Content */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                    >
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="rounded-3xl border border-white/[0.08] bg-[rgb(var(--panel)/0.65)] p-6 md:p-10"
+                >
                         <span className="text-sm font-medium uppercase tracking-wider text-[rgb(var(--brandWine))]">
                             Hikayemiz
                         </span>
@@ -65,14 +24,22 @@ export function StoryPreview() {
 
                         <div className="mt-6 space-y-4 text-white/60 leading-relaxed">
                             <p>
-                                Medeniyet Kasap & Izgara olarak, her gün taze ve kaliteli etleri
-                                özenle seçiyor, geleneksel tarifleri ustalıkla hazırlıyoruz.
+                                Medeniyet Kasap & Izgara olarak, her gün taze ve kaliteli etleri özenle
+                                seçiyor, geleneksel tarifleri ustalıkla hazırlıyoruz.
                             </p>
                             <p>
-                                İstanbul&apos;un kalbinde Eyüpsultan Çırçır&apos;da, geleneksel
-                                Türk mutfağının en lezzetli örneklerini sizlerle buluşturuyoruz.
-                                Her porsiyonu sevgiyle hazırlıyor, her misafirimizi ailemizin
-                                bir parçası olarak görüyoruz.
+                                Dana porsiyonlarımızdan kuzu çeşitlerimize, hamburgerlerimizden kebap
+                                seçeneklerimize kadar geniş menümüzle her damak zevkine hitap ediyoruz.
+                            </p>
+                            <p>
+                                Şimdi ise yeni konseptimizle birlikte lezzet anlayışımızı bir adım daha
+                                ileri taşıyoruz. Premium kahvaltı sunumlarımız ve özenle hazırlanan
+                                mezelerimizle sadece bir restoran değil, ayrıcalıklı bir gastronomi deneyimi
+                                sunmayı hedefliyoruz.
+                            </p>
+                            <p>
+                                Müşterilerimize sadece yemek değil; kalite, özen ve unutulmaz bir deneyim
+                                sunuyor, sıcak atmosferimizle sizleri ağırlamaktan mutluluk duyuyoruz.
                             </p>
                         </div>
 
@@ -110,8 +77,7 @@ export function StoryPreview() {
                                 />
                             </svg>
                         </Link>
-                    </motion.div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

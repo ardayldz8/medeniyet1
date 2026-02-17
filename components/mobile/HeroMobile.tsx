@@ -3,6 +3,7 @@
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 export function HeroMobile() {
@@ -100,20 +101,28 @@ export function HeroMobile() {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="mt-5 flex gap-3"
+                        className="mt-5 flex flex-wrap gap-3"
                     >
                         <a
-                            href="/rezervasyon"
+                            href="https://wa.me/905369243213"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex h-10 items-center justify-center rounded-lg bg-[rgb(var(--brandWine))] px-5 text-sm font-semibold text-white"
                         >
-                            Rezervasyon
+                            WhatsApp
                         </a>
                         <a
+                            href="tel:+905369243213"
+                            className="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 text-sm font-medium text-white/90"
+                        >
+                            Telefon
+                        </a>
+                        <Link
                             href="/menu"
                             className="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 text-sm font-medium text-white/90"
                         >
-                            Menüyü Gör
-                        </a>
+                            Menü
+                        </Link>
                     </motion.div>
 
                     {/* Tags */}
