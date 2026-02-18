@@ -6,6 +6,7 @@ import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { OnlineOrderLinks } from "@/components/home/OnlineOrderLinks";
 import { MenuQrSection } from "@/components/common/MenuQrSection";
+import { SocialQrSection } from "@/components/home/SocialQrSection";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <GalleryPreview />
       <OnlineOrderLinks />
       <MenuQrSection />
+      <SocialQrSection />
       <ContactCTA />
     </main>
   );

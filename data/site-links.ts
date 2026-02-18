@@ -24,4 +24,10 @@ export const ONLINE_ORDER_LINKS = [
   },
 ];
 
-export const MENU_QR_URL = "https://medeniyet.netlify.app/menu";
+export const MENU_QR_URL = "https://qrmenuapp.akinsoft.com.tr/WQQPWO/medeniyet-kasap-izgara/menu";
+
+export const SOCIAL_LINKS = {
+  instagram:
+    "https://www.instagram.com/medeniyetkasapizgara?igsh=MWNiM3oxaG9vM3R4cg%3D%3D&utm_source=qr",
+  tiktok: "https://www.tiktok.com/@medeniyetkasapizg?_r=1&_t=ZS-941rwQnaGGt",
+};

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 import { MENU_QR_URL } from "@/data/site-links";
 
 function toQrSrc(url: string) {
@@ -27,20 +27,21 @@ export function MenuQrSection({ compact = false }: MenuQrSectionProps) {
               Fiyat ve ürün güncellemeleri için QR kodu okutun. Kod direkt online menü sayfasını açar.
             </p>
             <div className="mt-5">
-              <Link
-                href="/menu"
+              <a
+                href={MENU_QR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-[rgb(var(--brandWine))] px-5 text-sm font-semibold text-white transition-colors hover:bg-[rgb(var(--brandWine)/0.9)]"
               >
-                Menüyü Aç
-              </Link>
+                Fiyatlı Menüyü Aç
+              </a>
             </div>
           </div>
-          <img
+          <Image
             src={toQrSrc(MENU_QR_URL)}
-            alt="Online menu icin QR kod"
+            alt="Online menü için QR kod"
             width={170}
             height={170}
-            loading="lazy"
             className="h-[170px] w-[170px] rounded-2xl border border-white/20 bg-white p-2"
           />
         </div>
