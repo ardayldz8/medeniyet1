@@ -55,19 +55,13 @@ export function MenuCard({ item, index }: MenuCardProps) {
                     </p>
                 )}
 
-                {/* Footer: Weight & Price */}
-                <div className="mt-4 flex items-end justify-between border-t border-white/[0.06] pt-4">
+                {/* Footer: Weight */}
+                <div className="mt-4 border-t border-white/[0.06] pt-4">
                     {item.weight && (
                         <span className="text-xs font-medium uppercase tracking-wider text-white/40">
                             {item.weight}
                         </span>
                     )}
-                    <div className="ml-auto flex items-baseline gap-1">
-                        <span className="text-sm font-medium text-white/40">₺</span>
-                        <span className="text-2xl font-bold tracking-tight text-[rgb(var(--brandWine))] transition-transform duration-300 group-hover:scale-105">
-                            {item.price.toLocaleString("tr-TR")}
-                        </span>
-                    </div>
                 </div>
             </div>
 
